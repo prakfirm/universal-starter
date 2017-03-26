@@ -1,27 +1,28 @@
-import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import {ChangeDetectionStrategy, Component, ViewEncapsulation} from "@angular/core";
 
-import { ModelService } from '../shared/model/model.service';
+import {ModelService} from "../shared/model/model.service";
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.Default,
-  encapsulation: ViewEncapsulation.Emulated,
-  selector: 'home',
-  styleUrls: [ './home.component.css' ],
-  templateUrl: './home.component.html'
+    changeDetection: ChangeDetectionStrategy.Default,
+    encapsulation: ViewEncapsulation.Emulated,
+    selector: 'home',
+    styleUrls: ['./home.component.css'],
+    templateUrl: './home.component.html'
 })
 export class HomeComponent {
-  data: any = {};
-  constructor(public model: ModelService) {
+    data: any = {};
 
-    // we need the data synchronously for the client to set the server response
-    // we create another method so we have more control for testing
-    this.universalInit();
-  }
+    constructor(public model: ModelService) {
 
-  universalInit() {
-    this.model.get('/data.json').subscribe(data => {
-      this.data = data;
-    });
-  }
+        // we need the data synchronously for the client to set the server response
+        // we create another method so we have more control for testing
+        this.universalInit();
+    }
+
+    universalInit() {
+        this.model.get('/data.json').subscribe(data => {
+            this.data = data;
+        });
+    }
 
 }

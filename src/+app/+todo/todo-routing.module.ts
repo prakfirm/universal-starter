@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
 
-import {TodoComponent} from './todo.component';
+import {TodoComponent} from "./todo.component";
 
 @NgModule({
     imports: [

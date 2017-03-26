@@ -1,8 +1,13 @@
 import {
-    Component, Directive, ElementRef, Renderer, ChangeDetectionStrategy, ViewEncapsulation,
-    Inject
-} from '@angular/core';
-import {DOCUMENT} from '@angular/platform-browser';
+    ChangeDetectionStrategy,
+    Component,
+    Directive,
+    ElementRef,
+    Inject,
+    Renderer,
+    ViewEncapsulation
+} from "@angular/core";
+import {DOCUMENT} from "@angular/platform-browser";
 import {isBrowser} from "angular2-universal";
 import {NavigationEnd, Router} from "@angular/router";
 import {Meta} from "../shared/meta/angular2-meta";

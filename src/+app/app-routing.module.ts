@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
 
 export function getLazyModule() {
     return System.import('./+lazy/lazy.module' + (process.env.AOT ? '.ngfactory' : ''))
